@@ -1,0 +1,16 @@
+.para1{
+    background-color: aqua;
+    color: brown;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.para2{
+    background-color: blueviolet;
+    color: black;
+    font-family: 'Segoe UI';
+}
+
+.image-class{
+    height: 30%;
+    width : 50%;
+}
