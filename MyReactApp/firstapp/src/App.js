@@ -1,45 +1,38 @@
 import './App.css';
 
-// function App() {
+function App(props) {
+  return (
+    <div className="App">
+      <Person name = {"pagal"} age = {20} gender = {"Male"}/>
+      <Person name = {"sri arun"} age = {27} gender = {"Male"}/>
+      <p>{props.cycle}</p>
+    </div>
+  );
+}
+
+const Person = (props) =>{
+  return (
+    <>
+      <p>Name - {props.name} , Age - {props.age} , Gender - {props.gender}</p>
+      {/* <App cycle = "true"></App> */}
+    </>
+  );
+}
+
+// const Caller = () =>{
 //   return (
-//     <div className="App">
-//       <header className="App-header">
-//        <p>Hello</p>
-//       </header>
-//     </div>
+//     <>
+//     <h1>H1 TAG</h1>
+//     <h2>H2 TAG</h2>
+//     This is the fragment
+//     </>
+//   );
+// }
+// const Arun = () =>{
+//   return (
+//     <p>Arun</p>
 //   );
 // }
 
-const Arun = () =>{
-  return (
-    <p>Arun</p>
-  );
-}
 
-const Sri = () =>{
-  return (
-    <>
-      <p>Sri</p>
-      <Arun/>
-    </>
-  );
-}
-
-const Caller = () =>{
-  return (
-    <>
-    <h1>H1 TAG</h1>
-    <Sri/>
-    <h2>H2 TAG</h2>
-    This is the fragment
-    </>
-  );
-}
-
-export default function App(){
-  return (
-    <>
-      {Caller()}
-    </>
-  );
-}
+export default App;
