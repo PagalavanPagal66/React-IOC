@@ -43,21 +43,19 @@ import './App.css';
 //     <button onClick={()=> test({name : "Arun"})}>Namer</button>
 //   );
 // }
+
 var output = 0;
 
-const Return = (value) =>{
-  return (
-    <>{value} {value.type}</>
-  );
-}
 const App = () => {
   const [value1 , setValue1] = useState(0);
   const [value2 , setValue2] = useState(0);
   const [reset, setReset] = useState(false);
+  const [output,setOutput] = useState(0);
   useEffect(
     ()=>{
       setValue1(0);
       setValue2(0);
+      setOutput(0);
     },[reset]
   )
   
@@ -68,6 +66,7 @@ const App = () => {
   const handle_val2_change = (e) =>{
     setValue2(e.target.value)
   }
+
   return (
     <>
       <h1>Arithmetics using React</h1>
@@ -76,17 +75,18 @@ const App = () => {
         <input type="text" placeholder="Enter value 2" required onChange={handle_val2_change}></input>
         <input type="reset" value="Reset" onClick={()=>{setReset(!reset)}}></input>
       </form>
-      <p>VALUE1 = {value1} , VALUE2 = {value2}</p>
+      <h1>VALUE1 = {value1} , VALUE2 = {value2}</h1>
       <div class = "buttons">
-        <button class = "button" onClick={()=>{output = Number(value1)+Number(value2);
-                console.log(output.type);  console.log(output); alert(output)}}>ADD</button>
-        <button class = "button" onClick={()=>{output = Number(value1)-Number(value2);
-                console.log(output.type);  console.log(output); alert(output)}}>SUB</button>
-        <button class = "button" onClick={()=>{output = Number(value1)*Number(value2);
-                console.log(output.type);  console.log(output); alert(output)}}>MUL</button>
-        <button class = "button" onClick={()=>{output = Number(value1)/Number(value2);
-                console.log(output.type);  console.log(output); alert(output)}}>DIV</button>
+        <button class = "button" onClick={()=>{setOutput(Number(value1)+Number(value2));
+               }}>ADD</button>
+        <button class = "button" onClick={()=>{setOutput(Number(value1)-Number(value2));
+                }}>SUB</button>
+        <button class = "button" onClick={()=>{setOutput(Number(value1)*Number(value2));
+          }}>MUL</button>
+        <button class = "button" onClick={()=>{setOutput(Number(value1)/Number(value2));
+            }}>DIV</button>
       </div>
+      <h1>{output}</h1>
     </>
   );
 }
