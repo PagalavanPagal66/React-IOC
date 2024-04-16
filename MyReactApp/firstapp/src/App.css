@@ -1,0 +1,12 @@
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 25px;
+    row-gap: 50px;
+    padding: 100px;
+}
+
+.button{
+    height: 100px;
+    width : 500px;
+}
