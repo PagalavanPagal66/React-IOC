@@ -1,12 +1,53 @@
 .buttons{
     display: grid;
     grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
     column-gap: 25px;
-    row-gap: 50px;
+    row-gap: 20px;
     padding: 100px;
+    background-color: yellowgreen;
+    align-items: center;
+    align-content: center;
 }
 
 .button{
-    height: 100px;
-    width : 500px;
+    height: 75px;
+    width : auto;
+    background-color: burlywood;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    row-gap: 50px;
+    padding: 15px;
+    background-color: aqua;
+}
+
+.inp1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: moccasin;
+}
+
+.inp2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: moccasin;
+}
+
+.reset {
+    height: 50px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+h1{
+    background-color: chocolate;  
+    text-align: center; 
+}
+
+body{
+    background-color: black;
 }
