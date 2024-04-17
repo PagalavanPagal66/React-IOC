@@ -1,0 +1,80 @@
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 25px;
+    row-gap: 20px;
+    padding: 100px;
+    background-color: yellowgreen;
+    align-items: center;
+    align-content: center;
+}
+
+.button{
+    height: 75px;
+    width : auto;
+    background-color: burlywood;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    row-gap: 50px;
+    padding: 15px;
+    background-color: aqua;
+}
+
+.inp1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: moccasin;
+}
+
+.inp2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: moccasin;
+}
+
+.reset {
+    height: 50px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+h1{
+    background-color: chocolate;  
+    text-align: center; 
+}
+
+body{
+    background-color: lightcoral;
+}
+.formval{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+    row-gap: 50px;
+    align-content: center;
+}
+.val1{
+    grid-area: 1 / 2 / 2 / 3;
+    height: 50px;
+}
+
+.val2{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.val3{
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.val4{
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.val5{
+    grid-area: 5 / 2 / 6 / 3;
+}
