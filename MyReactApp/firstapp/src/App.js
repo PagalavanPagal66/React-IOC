@@ -1,5 +1,5 @@
 import { useEffect, useState ,useReducer } from 'react';
-// import './App.css';
+import './App.css';
 
 // function App(props) {
 //   return (
@@ -96,20 +96,20 @@ import { useEffect, useState ,useReducer } from 'react';
 //   );
 // }
 
-const initialState = {counter : 0};
+// const initialState = {counter : 0};
 
-const reducer = (state,type) =>{
-  switch(type){
-    case "increment":
-      return state+1;
-    case "decrement":
-      return state-1;
-    case "reset":
-      return 0;
-    default:
-      throw new Error();
-  }
-};
+// const reducer = (state,type) =>{
+//   switch(type){
+//     case "increment":
+//       return state+1;
+//     case "decrement":
+//       return state-1;
+//     case "reset":
+//       return 0;
+//     default:
+//       throw new Error();
+//   }
+// };
 
 // const increment = () =>{
 //   //console.log("inc");
@@ -126,16 +126,37 @@ const reducer = (state,type) =>{
 //   return {type:"reset"};
 // }
 
+// const App = () => {
+//   const [state,dispatch] = useReducer(reducer,0);
+//   return (
+//     <div>
+//       Count : {state}
+//       <button onClick={()=>{dispatch("increment")}}>+</button>
+//       <button onClick={()=>{dispatch("decrement")}}>-</button>
+//       <button onClick={()=>{dispatch("reset")}}>reset</button>
+//     </div>
+//   );
+// }
+
+
 const App = () => {
-  const [state,dispatch] = useReducer(reducer,0);
-  return (
+  const [fname,setFname]  = useState('');
+  const [lname,setLname]  = useState('');
+  const [email,setEmail]  = useState('');
+  const [pass,setPass] = useState('');
+  return(
     <div>
-      Count : {state}
-      <button onClick={()=>{dispatch("increment")}}>+</button>
-      <button onClick={()=>{dispatch("decrement")}}>-</button>
-      <button onClick={()=>{dispatch("reset")}}>reset</button>
+      <form class = "formval">
+        <input class = "val1" type='text' value={fname} onChange={(e)=>setFname(e.target.value)} placeholder='Firstname'></input>
+        <input class = "val2" type='text' value={lname} required onChange={(e)=>setLname(e.target.value)} placeholder='Lastname'></input>
+        <input class = "val3" type='mail' value={email} required onChange={(e)=>setEmail(e.target.value)} placeholder='Mail'></input>
+        <input class = "val4" type='password' value={pass} required onChange={(e)=>setPass(e.target.value)} placeholder='Password'></input>    
+        <button class = "val5" type='submit' onClick={()=>{alert("FIRST NAME " + fname +
+                                                   "\nLAST NAME " + lname +
+                                                   "\nEMAIL " + email +
+                                                   "\nPASSWORD " +pass);}}>SUBMIT</button>    
+      </form>      
     </div>
   );
 }
-
 export default App;

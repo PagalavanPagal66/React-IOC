@@ -49,5 +49,32 @@ h1{
 }
 
 body{
-    background-color: black;
+    background-color: lightcoral;
+}
+.formval{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+    row-gap: 50px;
+    align-content: center;
+}
+.val1{
+    grid-area: 1 / 2 / 2 / 3;
+    height: 50px;
+}
+
+.val2{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.val3{
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.val4{
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.val5{
+    grid-area: 5 / 2 / 6 / 3;
 }
