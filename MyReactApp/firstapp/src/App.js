@@ -1,5 +1,7 @@
 import { useEffect, useState ,useReducer } from 'react';
 import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 // function App(props) {
 //   return (
@@ -138,30 +140,75 @@ import './App.css';
 //   );
 // }
 
-const App = () => {
-  const [fname,setFname]  = useState('');
-  const [lname,setLname]  = useState('');
-  const [email,setEmail]  = useState('');
-  const [pass,setPass] = useState('');
-  return(
-    <div>
-      <div class = "formval">
-        <input class = "val1" type='text' onChange={(e)=>setFname(e.target.value)} placeholder='Firstname'></input>
-        <div class = "div1">{fname}</div>
-        <input class = "val2" type='text' required onChange={(e)=>setLname(e.target.value)} placeholder='Lastname'></input>
-        <div class = "div2" >{lname}</div>
-        <input class = "val3" type='mail' required onChange={(e)=>setEmail(e.target.value)} placeholder='Mail'></input>
-        <div class = "div3" >{email}</div>
-        <input class = "val4" type='password'  required onChange={(e)=>setPass(e.target.value)} placeholder='Password'></input>    
-        <div class ="div4" >{pass}</div>
-        <button class = "val5" onClick={
-            ()=>{console.log("FIRST NAME " + fname +
-                                                   "\nLAST NAME " + lname +
-                                                   "\nEMAIL " + email +
-                                                   "\nPASSWORD " +pass); }
-        }>SUBMIT</button>    
-      </div>      
-    </div>
-  );
+// const App = () => {
+//   const [fname,setFname]  = useState('');
+//   const [lname,setLname]  = useState('');
+//   const [email,setEmail]  = useState('');
+//   const [pass,setPass] = useState('');
+//   var name = "thilak";
+//   return(
+//     <>
+//       <div class = "formval">
+//         <input class = "val1" type='text' onChange={(e)=>setFname(e.target.value)} placeholder='Firstname'></input>
+//         <div class = "div1">{fname}</div>
+//         <input class = "val2" type='text' required onChange={(e)=>setLname(e.target.value)} placeholder='Lastname'></input>
+//         <div class = "div2" >{lname}</div>
+//         <input class = "val3" type='mail' required onChange={(e)=>setEmail(e.target.value)} placeholder='Mail'></input>
+//         <div class = "div3" >{email}</div>
+//         <input class = "val4" type='password'  required onChange={(e)=>setPass(e.target.value)} placeholder='Password'></input>    
+//         <div class ="div4" >{pass}</div>
+//         <button class = "val5" onClick={
+//             ()=>{console.log("FIRST NAME " + fname +
+//                                                    "\nLAST NAME " + lname +
+//                                                    "\nEMAIL " + email +
+//                                                    "\nPASSWORD " +pass); }
+//         }>SUBMIT</button>    
+//       </div>      
+//     </>
+//   );
+// }
+
+// const App = () =>{
+//   return (
+//     <React.Fragment>
+//       <h1>H1</h1>
+//       h1  
+//       <h2>H2</h2>
+//       <h3>H3</h3>
+//       <h4>H4</h4>
+//       <h5>H5</h5>
+//     </React.Fragment>
+//   );
+// }
+// export default App;
+class Tablecreation extends React.Component{
+  render(){
+    return(
+    <>
+      <table>
+
+        <tr>
+          <th>NAME</th>
+          <th>AGE</th>
+          <th>GENDER</th>
+        </tr>
+
+        <tr>
+          <td>AAA</td>
+          <td>11</td>
+          <td>Male</td>
+        </tr>
+
+        <tr>
+          <td>BBB</td>
+          <td>22</td>
+          <td>Female</td>
+        </tr>
+        
+      </table>
+    </>
+    );
+  }
 }
-export default App;
+
+export default Tablecreation;
