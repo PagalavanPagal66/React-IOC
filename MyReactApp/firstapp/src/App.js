@@ -269,73 +269,25 @@ import ReactDOM from 'react-dom/client';
 
 //---------------------------------- Images -----------------------------------------
 
-import Virat from './Assets/Virat.jpeg'
 
-const Func = (props) => {
-  const val = props.myvalue;
-  console.log(val);
-  const rl = val.map((listvalue) => {
-    return <li>{listvalue}</li>
-  });
-  return <ul>{rl}</ul>    
-}
-
-const Run_creator = (props) =>{
-  const runs = props.runs;
-  const sr_rate = props.sr_rate;
-  const avg = props.avg;
-  const run = runs.map((run)=>{
-    return (<tr>{run}</tr>);
-  })
-  console.log(runs);
-  return <td>{run}</td>;
-}
-
-const Sr_creator = (props) =>{
-  const sr_rate = props.sr_rate;
-  const sr = sr_rate.map((srate)=>{
-    return (<tr>{srate}</tr>);
-  })
-  return <td>{sr}</td>;
-}
-
-const Avg_creator = (props) =>{
-  const avg = props.avg;
-  const avgs = avg.map((average)=>{
-    return (<tr>{average}</tr>);
-  })
-  return <td>{avgs}</td>;
-}
-
-const Para = (props) =>{
-  const para = props.text;
-  return <p>{para}</p>;
-}
-
+import { Routes, Route, Link } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Practice from './components/Practice';
 
 const App = () =>{
-
-  const runs = [973, 505, 359, 634, 364]
-  const sr_rate = [152, 130, 122, 138, 111]
-  const avg = [81, 45 , 27,  45, 28]
-  const text = "Hi... Hello how are you...!"
-  const myvalue = ["Name" , "Age" ,"gender" ,"address"] 
   return(
-    
-    <>
-      <img src={Virat}></img>
-      <table class = "table">
-        <th>Runs</th>
-        <th>Average</th>
-        <th>Strike Rate</th>
-        <tr>
-          <Run_creator runs = {runs}></Run_creator>
-          <Avg_creator avg = {avg}></Avg_creator>
-          <Sr_creator sr_rate = {sr_rate}></Sr_creator>
-        </tr>
-      </table>
-      <Para text = {text}></Para>
-      <Func myvalue = {myvalue}></Func>
+    <>  
+        <div class="Navbar">
+          <Link to="/home">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/practice">Practice</Link>
+        </div>
+        <Routes>
+         <Route path="/home" element={<Home/>} />
+         <Route path="/about" element={<About/>} />
+         <Route path='/practice' element={<Practice/>}/>
+       </Routes>
     </>
   );
 }

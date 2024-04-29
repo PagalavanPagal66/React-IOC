@@ -1,6 +1,9 @@
+import Virat from '../Assets/Virat.jpeg'
+import './Home.css';
+
 const Home = () => {
     return (
-        <h1>Home</h1>
+        <img class="image" src={Virat}></img>
     );
 }
 
