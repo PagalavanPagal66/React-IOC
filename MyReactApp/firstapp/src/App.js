@@ -181,34 +181,78 @@ import ReactDOM from 'react-dom/client';
 //   );
 // }
 // export default App;
-class Tablecreation extends React.Component{
-  render(){
-    return(
-    <>
-      <table>
 
-        <tr>
-          <th>NAME</th>
-          <th>AGE</th>
-          <th>GENDER</th>
-        </tr>
 
-        <tr>
-          <td>AAA</td>
-          <td>11</td>
-          <td>Male</td>
-        </tr>
+//Class - comp---------------------------------------------------------------------------------------------------
+// class Tablecreation extends React.Component{
+//   render(){
+//     return(
+//     <>
+//       <table>
 
-        <tr>
-          <td>BBB</td>
-          <td>22</td>
-          <td>Female</td>
-        </tr>
-        
-      </table>
-    </>
-    );
-  }
+//         <tr>
+//           <th>NAME</th>
+//           <th>AGE</th>
+//           <th>GENDER</th>
+//         </tr>
+
+//         <tr>
+//           <td>AAA</td>
+//           <td>11</td>
+//           <td>Male</td>
+//         </tr>
+
+//         <tr>
+//           <td>BBB</td>
+//           <td>22</td>
+//           <td>Female</td>
+//         </tr>
+
+//       </table>
+//     </>
+//     );
+//   }
+// }
+
+// export default Tablecreation;
+
+
+//Class - comp---------------------------------------------------------------------------------------------------
+
+// const App = () => {
+//   const newlist = [1,2,3,"hi","hello"] 
+//   const rl = newlist.map( (listvalues) => {return <li>{listvalues}</li>});
+//   return 
+// }
+
+
+// const App = () =>{
+//   const list=[1,2,3,"hi"]
+//     const rl=list.map((values)=>{
+//         return <li>{values + "*********" + list}</li>
+//     }) ;
+//   return (
+//     <>{rl}</>
+//   );
+// }
+
+
+//-----------------------------------------------------------Props & map-----------------------------------------------
+
+const Func = (props) => {
+  const val = props.myvalue;
+  console.log(val);
+  const rl = val.map((listvalue) => {
+    return <li>{listvalue}</li>
+  });
+  return <ul>{rl}</ul>    
 }
 
-export default Tablecreation;
+const App = () =>{
+  const myvalue = [4,5,6];
+  return (
+    <Func myvalue = {myvalue} ></Func>
+  );
+}
+
+export default App;
