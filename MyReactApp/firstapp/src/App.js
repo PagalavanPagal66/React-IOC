@@ -145,7 +145,7 @@ const App = () => {
   const [pass,setPass] = useState('');
   return(
     <div>
-      <form class = "formval">
+      <div class = "formval">
         <input class = "val1" type='text' onChange={(e)=>setFname(e.target.value)} placeholder='Firstname'></input>
         <div class = "div1">{fname}</div>
         <input class = "val2" type='text' required onChange={(e)=>setLname(e.target.value)} placeholder='Lastname'></input>
@@ -160,7 +160,7 @@ const App = () => {
                                                    "\nEMAIL " + email +
                                                    "\nPASSWORD " +pass); }
         }>SUBMIT</button>    
-      </form>      
+      </div>      
     </div>
   );
 }
