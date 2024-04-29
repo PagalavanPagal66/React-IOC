@@ -274,10 +274,13 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Practice from './components/Practice';
+import './temp.scss'
 
-const App = () =>{
+class App extends React.Component{
+  render(){
   return(
     <>  
+    <h1>CLASS</h1>
         <div class="Navbar">
           <Link to="/home">Home</Link>
           <Link to="/about">About</Link>
@@ -290,6 +293,7 @@ const App = () =>{
        </Routes>
     </>
   );
+}
 }
 
 export default App;
