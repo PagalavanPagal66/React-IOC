@@ -53,28 +53,56 @@ body{
 }
 .formval{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
     row-gap: 50px;
     align-content: center;
 }
 .val1{
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 2 / 2 / 4;
     height: 50px;
 }
 
 .val2{
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 2 / 2 / 3 / 4;
 }
 
 .val3{
-    grid-area: 3 / 2 / 4 / 3;
+    grid-area: 3 / 2 / 4 / 4;
 }
 
 .val4{
-    grid-area: 4 / 2 / 5 / 3;
+    grid-area: 4 / 2 / 5 / 4;
 }
 
 .val5{
-    grid-area: 5 / 2 / 6 / 3;
+    grid-area: 5 / 2 / 6 / 4;
+}
+
+.div1{
+    grid-area: 1 / 5 / 2 / 6;
+    text-align: center;
+    align-content: center;
+    background-color: aqua;
+}
+
+.div2 {
+    grid-area: 2 / 5 / 3 / 6;
+    text-align: center;
+    align-content: center;
+    background-color: aqua;
+}
+
+.div3 {
+    grid-area: 3 / 5 / 4 / 6;
+    text-align: center;
+    align-content: center;
+    background-color: aqua;
+}
+
+.div4 {
+    grid-area: 4 / 5 / 5 / 6;
+    text-align: center;
+    align-content: center;
+    background-color: aqua; 
 }

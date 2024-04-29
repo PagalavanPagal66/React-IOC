@@ -138,7 +138,6 @@ import './App.css';
 //   );
 // }
 
-
 const App = () => {
   const [fname,setFname]  = useState('');
   const [lname,setLname]  = useState('');
@@ -147,14 +146,20 @@ const App = () => {
   return(
     <div>
       <form class = "formval">
-        <input class = "val1" type='text' value={fname} onChange={(e)=>setFname(e.target.value)} placeholder='Firstname'></input>
-        <input class = "val2" type='text' value={lname} required onChange={(e)=>setLname(e.target.value)} placeholder='Lastname'></input>
-        <input class = "val3" type='mail' value={email} required onChange={(e)=>setEmail(e.target.value)} placeholder='Mail'></input>
-        <input class = "val4" type='password' value={pass} required onChange={(e)=>setPass(e.target.value)} placeholder='Password'></input>    
-        <button class = "val5" type='submit' onClick={()=>{alert("FIRST NAME " + fname +
+        <input class = "val1" type='text' onChange={(e)=>setFname(e.target.value)} placeholder='Firstname'></input>
+        <div class = "div1">{fname}</div>
+        <input class = "val2" type='text' required onChange={(e)=>setLname(e.target.value)} placeholder='Lastname'></input>
+        <div class = "div2" >{lname}</div>
+        <input class = "val3" type='mail' required onChange={(e)=>setEmail(e.target.value)} placeholder='Mail'></input>
+        <div class = "div3" >{email}</div>
+        <input class = "val4" type='password'  required onChange={(e)=>setPass(e.target.value)} placeholder='Password'></input>    
+        <div class ="div4" >{pass}</div>
+        <button class = "val5" onClick={
+            ()=>{console.log("FIRST NAME " + fname +
                                                    "\nLAST NAME " + lname +
                                                    "\nEMAIL " + email +
-                                                   "\nPASSWORD " +pass);}}>SUBMIT</button>    
+                                                   "\nPASSWORD " +pass); }
+        }>SUBMIT</button>    
       </form>      
     </div>
   );
