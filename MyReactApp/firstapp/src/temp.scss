@@ -1,6 +1,30 @@
 $colorvar:red;
 $bgcolor:white;
+
 h1 {
     color: $colorvar;
     background-color: $bgcolor;
+}
+
+.Navbar {
+    .Link{
+        background-color: white;
+    }
+    display: grid;
+    width: 100px;
+    height: 300px;
+    background-color: red;
+    color: antiquewhite;
+    align-items: center;
+    align-self:center;
+}
+
+.Navbar-items{
+    background-color: beige;
+    height: 70%;
+    width: 90%;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    padding-left: 10%;
 }

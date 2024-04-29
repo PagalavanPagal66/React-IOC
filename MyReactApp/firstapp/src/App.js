@@ -280,11 +280,11 @@ class App extends React.Component{
   render(){
   return(
     <>  
-    <h1>CLASS</h1>
+    <h1>VIRAT</h1>
         <div class="Navbar">
-          <Link to="/home">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/practice">Practice</Link>
+          <Link class = "Navbar-items" to="/home">Home</Link>
+          <Link class = "Navbar-items" to="/about">About</Link>
+          <Link class = "Navbar-items" to="/practice">Practice</Link>
         </div>
         <Routes>
          <Route path="/home" element={<Home/>} />

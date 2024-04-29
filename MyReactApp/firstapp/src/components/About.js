@@ -1,4 +1,4 @@
-
+import './About.css';
 const Run_creator = (props) =>{
   const runs = props.runs;
   const sr_rate = props.sr_rate;
